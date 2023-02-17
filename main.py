@@ -20,3 +20,15 @@ class CarShowRoom:
             print("No Cars")
         for i, car in enumerate(self.cars):
             print(f"{i + 1}. {car.name} {car.type} ({car.power}) - ${car.price}")
+
+    def update(self, index, name=None, price=None, type=None, power=None):
+        car = self.cars[index - 1]
+        if name:
+            car.name = name
+        if type:
+            car.type = type
+        if power:
+            car.power = power
+        if price:
+            car.price = price
+        print(f"{car.name} Updated")
