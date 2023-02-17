@@ -32,3 +32,8 @@ class CarShowRoom:
         if price:
             car.price = price
         print(f"{car.name} Updated")
+
+    def delete(self, index):
+        car = self.cars.pop(index - 1)
+        print(f"{car.name} Removed")
+
